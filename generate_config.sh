@@ -4,8 +4,6 @@
 
 echo "Generating server.properties file..."
 # set port to envvar PORT or default to 25565
-MAXPLAYERS=${MAXPLAYERS:-20}
-ONLINEMODE=${ONLINEMODE:-true}
 echo "server.port=25565" > server.properties
 echo "motd=&3Logiscool &7- &3Minecraft" >> server.properties
 echo "server-ip=" >> server.properties
