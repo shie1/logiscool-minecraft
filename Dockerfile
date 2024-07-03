@@ -30,7 +30,5 @@ RUN chmod +x generate_config.sh && ./generate_config.sh
 # Expose the Minecraft server port
 EXPOSE 25565
 
-RUN echo "Please do not change ENVVARS after the first run. If you need to change them, please delete the container and create a new one."
-
 # Start the Minecraft server with the specified RAM as entrypoint
 ENTRYPOINT ["/server/entrypoint.sh"]

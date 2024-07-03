@@ -10,6 +10,5 @@ services:
     environment:
       MAXPLAYERS: $MAXPLAYERS
       ONLINEMODE: $ONLINEMODE
-      RAM: $RAM
     volumes:
       - /home/test/minecraftserver:/server
