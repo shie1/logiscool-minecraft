@@ -9,6 +9,7 @@ RUN mkdir /server
 
 # Copy the server files to the container
 COPY generate_config.sh /server
+COPY entrypoint.sh /server
 COPY paper-server_1.12.2.jar /server
 COPY plugins /server/plugins
 COPY server-icon.png /server/server-icon.png
@@ -28,4 +29,4 @@ EXPOSE 25565
 RUN echo "Please do not change ENVVARS after the first run. If you need to change them, please delete the container and create a new one."
 
 # Start the Minecraft server with the specified RAM as entrypoint
-ENTRYPOINT java -Xmx$RAM -Xms$RAM -jar paper-server_1.12.2.jar nogui
+ENTRYPOINT ["/server/entrypoint.sh"]
