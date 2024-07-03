@@ -1,0 +1,9 @@
+eula.txt
+cache
+logs
+server.properties
+world*
+*.json
+*.yml
+plugins/*
+!plugins/*.jar
