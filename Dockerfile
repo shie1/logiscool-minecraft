@@ -2,7 +2,9 @@
 FROM openjdk:8-jre-alpine
 
 # Install necessary packages
-RUN apk update && apk add --no-cache bash
+RUN apk update
+RUN apk add --no-cache bash
+RUN apk add --no-cache git
 
 # Create the server directory
 RUN mkdir /server
@@ -14,8 +16,8 @@ COPY paper-server_1.12.2.jar /server
 COPY plugins /server/plugins
 COPY server-icon.png /server/server-icon.png
 
-# Copy the generate_config.sh script to the container
-COPY generate_config.sh /server/generate_config.sh
+# Check if the file exists
+RUN test -e /server/entrypoint.sh || git clone https://github.com/shie1/logiscool-minecraft /server
 
 # Set the working directory
 WORKDIR /server
