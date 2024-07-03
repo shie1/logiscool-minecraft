@@ -22,6 +22,8 @@ RUN test -e /server/entrypoint.sh || git clone https://github.com/shie1/logiscoo
 # Set the working directory
 WORKDIR /server
 
+RUN chmod +x /server/entrypoint.sh
+
 # Run the generate_config.sh script to generate the server configuration
 RUN chmod +x generate_config.sh && ./generate_config.sh
 
