@@ -5,5 +5,6 @@ server.properties
 world*
 *.json
 *.yml
+!.github/*/*.yml
 plugins/*
 !plugins/*.jar
