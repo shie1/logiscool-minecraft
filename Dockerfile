@@ -4,6 +4,9 @@ FROM openjdk:8-jre-alpine
 # Install necessary packages
 RUN apk update && apk add --no-cache bash
 
+# Create the server directory
+RUN mkdir /server
+
 # Copy the server files to the container
 COPY generate_config.sh /server
 COPY paper-server_1.12.2.jar /server
