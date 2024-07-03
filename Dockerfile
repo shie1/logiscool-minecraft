@@ -23,7 +23,7 @@ WORKDIR /server
 RUN chmod +x generate_config.sh && ./generate_config.sh
 
 # Expose the Minecraft server port
-EXPOSE $PORT
+EXPOSE 25565
 
 RUN echo "Please do not change ENVVARS after the first run. If you need to change them, please delete the container and create a new one."
 

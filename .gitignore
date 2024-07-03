@@ -8,3 +8,4 @@ world*
 !.github/*/*.yml
 plugins/*
 !plugins/*.jar
+!*example.yml
