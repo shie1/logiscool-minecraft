@@ -1,6 +1,8 @@
 #!/bin/bash
 
 # Generate server.properties file
+
+# Set default values
 if [ -z "$MAXPLAYERS" ]; then
     MAXPLAYERS=20
 fi
@@ -20,8 +22,8 @@ echo "Generating server.properties file..."
 echo "server.port=25565" > server.properties
 echo "motd=Logiscool Tábor szerver" >> server.properties
 echo "server-ip=" >> server.properties
-echo "max-players=$MAXPLAYERS" >> server.properties
-echo "online-mode=$ONLINEMODE" >> server.properties
+printf 'max-players=%s\n' "$MAXPLAYERS" >> server.properties
+printf 'online-mode=%s\n' "$ONLINEMODE" >> server.properties
 echo "gamemode=1" >> server.properties
 echo "allow-flight=true" >> server.properties
 echo "enable-command-block=false" >> server.properties
@@ -43,8 +45,8 @@ echo "resource-pack=" >> server.properties
 echo "resource-pack-sha1=" >> server.properties
 echo "require-resource-pack=false" >> server.properties
 echo "broadcast-console-to-ops=true" >> server.properties
-echo "enable-rcon=$RCONENABLED" >> server.properties
-echo "rcon.password=$RCONPASSWORD" >> server.properties
+printf 'enable-rcon=%s\n' "$RCONENABLED" >> server.properties
+printf 'rcon.password=%s\n' "$RCONPASSWORD" >> server.properties
 echo "rcon.port=25575" >> server.properties
 echo "broadcast-rcon-to-ops=true" >> server.properties
 echo "enable-query=true" >> server.properties
