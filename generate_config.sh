@@ -8,8 +8,8 @@ echo "Generating server.properties file..."
 echo "server.port=25565" > server.properties
 echo "motd=Logiscool Tábor szerver" >> server.properties
 echo "server-ip=" >> server.properties
-echo "max-players=$MAXPLAYERS" >> server.properties
-echo "online-mode=$ONLINEMODE" >> server.properties
+echo "max-players=40" >> server.properties
+echo "online-mode=true" >> server.properties
 echo "gamemode=1" >> server.properties
 echo "allow-flight=true" >> server.properties
 echo "enable-command-block=false" >> server.properties
