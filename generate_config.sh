@@ -6,7 +6,7 @@
 echo "Generating server.properties file..."
 # set port to envvar PORT or default to 25565
 echo "server.port=25565" > server.properties
-echo "motd=Logiscool Tábor szerver" >> server.properties
+echo "motd=Logiscool szerver" >> server.properties
 echo "server-ip=" >> server.properties
 echo "max-players=40" >> server.properties
 echo "online-mode=true" >> server.properties
