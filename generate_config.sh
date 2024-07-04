@@ -3,15 +3,19 @@
 # Generate server.properties file
 
 # Set default values
-if [ -z "$MAXPLAYERS" ]; then
+if [ -z "${MAXPLAYERS}" ]; then
     MAXPLAYERS=20
+else
+    MAXPLAYERS=$MAXPLAYERS
 fi
 
-if [ -z "$ONLINEMODE" ]; then
+if [ -z "${ONLINEMODE}" ]; then
     ONLINEMODE=true
+else
+    ONLINEMODE=$ONLINEMODE
 fi
 
-if [ -z "$RCONPASSWORD" ]; then
+if [ -z "${RCONPASSWORD}" ]; then
     RCONENABLED=false
 else
     RCONENABLED=true
