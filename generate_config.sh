@@ -4,7 +4,6 @@
 
 MAXPLAYERS=${MAXPLAYERS:-20}
 ONLINEMODE=${ONLINEMODE:-true}
-RCONPASSWORD=${RCONPASSWORD:-password}
 
 # IF rcon password is set, set RCONENABLED to true, else false
 if [ -z "$RCONPASSWORD" ]; then
