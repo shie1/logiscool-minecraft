@@ -2,6 +2,17 @@
 
 # Generate server.properties file
 
+MAXPLAYERS=${MAXPLAYERS:-20}
+ONLINEMODE=${ONLINEMODE:-true}
+RCONPASSWORD=${RCONPASSWORD:-password}
+
+# IF rcon password is set, set RCONENABLED to true, else false
+if [ -z "$RCONPASSWORD" ]; then
+    RCONENABLED=false
+else
+    RCONENABLED=true
+fi
+
 echo "Generating server.properties file..."
 # set port to envvar PORT or default to 25565
 echo "server.port=25565" > server.properties
@@ -30,8 +41,9 @@ echo "resource-pack=" >> server.properties
 echo "resource-pack-sha1=" >> server.properties
 echo "require-resource-pack=false" >> server.properties
 echo "broadcast-console-to-ops=true" >> server.properties
-echo "enable-rcon=false" >> server.properties
-echo "rcon.password=" >> server.properties
+echo "enable-rcon=$RCONENABLED" >> server.properties
+echo "rcon.password=$RCONPASSWORD" >> server.properties
+echo "rcon.port=25575" >> server.properties
 echo "broadcast-rcon-to-ops=true" >> server.properties
 echo "enable-query=true" >> server.properties
 echo "enable-jmx-monitoring=false" >> server.properties
