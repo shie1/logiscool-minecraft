@@ -1,5 +1,5 @@
 # Use a base image with Java and Minecraft server
-FROM openjdk:19-jdk-alpine
+FROM openjdk:8-jre-alpine
 
 # Install necessary packages
 RUN apk update
