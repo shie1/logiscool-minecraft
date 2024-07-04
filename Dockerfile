@@ -15,6 +15,7 @@ COPY entrypoint.sh /server
 COPY paper-server_1.12.2.jar /server
 COPY plugins /server/plugins
 COPY server-icon.png /server/server-icon.png
+COPY commands.yml /server/commands.yml
 
 # Check if the file exists
 RUN test -e /server/entrypoint.sh || git clone https://github.com/shie1/logiscool-minecraft /server

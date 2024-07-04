@@ -9,3 +9,4 @@ world*
 plugins/*
 !plugins/*.jar
 !*example.yml
+!commands*
