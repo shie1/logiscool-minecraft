@@ -7,3 +7,4 @@ world*
 *.yml
 plugins/*
 !plugins/*.jar
+!commands*
