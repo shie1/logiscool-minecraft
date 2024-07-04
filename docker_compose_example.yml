@@ -4,6 +4,8 @@ services:
   mcserver:
     image: ghcr.io/shie1/logiscool-minecraft:master
     container_name: logiscool-minecraft
+    tty: true
+    stdin_open: true
     restart: always
     ports:
       - 25565:25565
@@ -12,4 +14,9 @@ services:
       ONLINEMODE: $ONLINEMODE
       RAM: $RAM
     volumes:
-      - /home/test/minecraftserver:/server
+      - mcserver:/mcserver
+
+volumes:
+  mcserver:
+    external:
+      name: mcserver
