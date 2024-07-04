@@ -1,11 +1,14 @@
 #!/bin/bash
 
 # Generate server.properties file
+if [ -z "$MAXPLAYERS" ]; then
+    MAXPLAYERS=20
+fi
 
-MAXPLAYERS=${MAXPLAYERS:-20}
-ONLINEMODE=${ONLINEMODE:-true}
+if [ -z "$ONLINEMODE" ]; then
+    ONLINEMODE=true
+fi
 
-# IF rcon password is set, set RCONENABLED to true, else false
 if [ -z "$RCONPASSWORD" ]; then
     RCONENABLED=false
 else
