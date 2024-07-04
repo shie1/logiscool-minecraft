@@ -18,7 +18,7 @@ fi
 echo "Generating server.properties file..."
 # set port to envvar PORT or default to 25565
 echo "server.port=25565" > server.properties
-echo "motd=&3Logiscool &7- &3Minecraft" >> server.properties
+echo "motd=Logiscool Tábor szerver" >> server.properties
 echo "server-ip=" >> server.properties
 echo "max-players=$MAXPLAYERS" >> server.properties
 echo "online-mode=$ONLINEMODE" >> server.properties
