@@ -14,7 +14,7 @@ services:
       ONLINEMODE: $ONLINEMODE
       RAM: $RAM
     volumes:
-      - mcserver:/mcserver
+      - mcserver:/server
 
 volumes:
   mcserver:
