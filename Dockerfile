@@ -4,7 +4,6 @@ FROM alpine:3.20.1
 # Install necessary packages
 RUN apk update
 RUN apk add --no-cache bash
-RUN apk add --no-cache git
 RUN apk add --no-cache openjdk11-jre
 
 # Create the server directory
@@ -17,9 +16,6 @@ COPY paper-server_1.12.2.jar /server
 COPY plugins /server/plugins
 COPY server-icon.png /server/server-icon.png
 COPY commands.yml /server/commands.yml
-
-# Check if the file exists
-RUN test -e /server/entrypoint.sh || git clone https://github.com/shie1/logiscool-minecraft /server
 
 # Set the working directory
 WORKDIR /server
