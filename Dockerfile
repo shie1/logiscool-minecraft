@@ -1,10 +1,11 @@
 # Use a base image with Java and Minecraft server
-FROM openjdk:8-jre-alpine
+FROM alpine:3.20.1
 
 # Install necessary packages
 RUN apk update
 RUN apk add --no-cache bash
 RUN apk add --no-cache git
+RUN apk add --no-cache openjdk11-jre
 
 # Create the server directory
 RUN mkdir /server
